@@ -12,7 +12,7 @@ The data is divided in multiple datasets for better understanding and organizati
 ## Tasks
 
 ### Task 1 - Data Modeling & Visualization
-In the following task we'd like to understand your data modeling and visualization skills. Whether you understand the abstraction difference between Executive and Operational dashboards. 
+*In the following task we'd like to understand your data modeling and visualization skills. Whether you understand the abstraction difference between Executive and Operational dashboards.* 
 - Using the above mentioned semantic model diagram assamble the following data model in **Power BI**.
 - Build a comprehensive dashboard (i.e. multiple report pages) on which a C-level Executive can visually run a health-check on the company.
 - Build an operational report page where one can track the website's performance in attracting new users and generating revenue.
@@ -29,4 +29,5 @@ In the following task we'd like to understand your data modeling and visualizati
 > - Web Analytics
 
 ### Task 2 - Insight Generation
+*In this section we would like to assess your ability to make sense of the data at hand pinpoint the critical aspects of it and your general skills in data storytelling.*
 - Name the three most important insights to a C-level executive. Explain your ideas in detail! What are the business actions one could take on your insights?

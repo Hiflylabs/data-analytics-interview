@@ -1,6 +1,5 @@
 # Data Visualization and Analytics Interview at Hiflylabs
-## Understanding the Dataset
-### Context
+## Context
 This is a [publicly available dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/) of a Brazilian Online Store. The dataset has information of 100k orders from 2016 to 2018 made at multiple marketplaces in Brazil. Its features allows viewing an order from multiple dimensions: from order status, price, payment and freight performance to customer location, product attributes and finally reviews written by customers. We also released a geolocation dataset that relates Brazilian zip codes to lat/lng coordinates.
 
 This is real commercial data, it has been anonymised, and references to the companies and partners in the review text have been replaced.
@@ -9,10 +8,10 @@ This is real commercial data, it has been anonymised, and references to the comp
 > - An order might have multiple items.
 > - Each item might be fulfilled by a distinct seller.
 > - All text identifying stores and partners where replaced by the names of Game of Thrones great houses.
-<details>
-<summary>Open the dropdown menu to get more detail of the contents of each dataset</summary>
 
-**olist_customers_dataset.csv**
+## Understanding the Dataset
+
+### olist_customers_dataset.csv
 
 This dataset has information about the customer and its location. Use it to identify unique customers in the orders dataset and to find the orders delivery location.
 
@@ -27,7 +26,7 @@ At our system each order is assigned to a unique customer_id. This means that th
 | customer_state | customer state |
 
 
-**olist_geolocation_dataset.csv**
+### olist_geolocation_dataset.csv
 
 This dataset has information Brazilian zip codes and its lat/lng coordinates. Use it to plot maps and find distances between sellers and customers.
 
@@ -39,7 +38,7 @@ This dataset has information Brazilian zip codes and its lat/lng coordinates. Us
 | geolocation_city | city name |
 | geolocation_state | state |
 
-**olist_order_items_dataset.csv**
+### olist_order_items_dataset.csv
 
 This dataset includes data about the items purchased within each order.
 
@@ -63,27 +62,27 @@ The order_id = ```00143d0f86d6fbd9f9b38ab440ac16f5``` has 3 items (same product)
 | price | item price |
 | freight_value | item freight value item (if an order has more than one item the freight value is splitted between items) |
 
-**olist_order_payments_dataset.csv**
+### olist_order_payments_dataset.csv
 
 FIXME
 
-**olist_order_reviews_dataset.csv**
+### olist_order_reviews_dataset.csv
 
 FIXME
 
-**olist_orders_dataset.csv**
+### olist_orders_dataset.csv
 
 FIXME
 
-**olist_products_dataset.csv**
+### olist_products_dataset.csv
 
 FIXME
 
-**olist_sellers_dataset.csv**
+### olist_sellers_dataset.csv
 
 FIXME
 
-**product_category_name_translation.csv**
+### product_category_name_translation.csv
 
 FIXME
 </details>

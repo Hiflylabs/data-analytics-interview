@@ -46,7 +46,7 @@ This dataset includes data about the items purchased within each order.
 
 The order_id = ```00143d0f86d6fbd9f9b38ab440ac16f5``` has 3 items (same product). Each item has the freight calculated accordingly to its measures and weight. To get the total freight value for each order you just have to sum.
 
-**The total order_item value is:** ```21.33 * 3 = 63.99```
+**The total order_item value is:** `21.33 * 3 = 63.99`
 
 **The total freight value is:** `15.10 * 3 = 45.30`
 
@@ -64,27 +64,87 @@ The order_id = ```00143d0f86d6fbd9f9b38ab440ac16f5``` has 3 items (same product)
 
 ### olist_order_payments_dataset.csv
 
-FIXME
+This dataset includes data about the orders payment options.
+
+| Column Name | Description |
+| --- | ---|
+| order_id | unique identifier of an order |
+| payment_sequential | a customer may pay an order with more than one payment method. If he does so, a sequence will be created to accommodate all payments |
+| payment_type | method of payment chosen by the customer |
+| payment_installments | number of installments chosen by the customer |
+| payment_value | transaction value |
+| shipping_limit_date | shows the seller shipping limit date for handling the order over to the logistic partner |
+| price | item price |
+| freight_value | item freight value item (if an order has more than one item the freight value is splitted between items) |
 
 ### olist_order_reviews_dataset.csv
 
-FIXME
+This dataset includes data about the reviews made by the customers.
+
+After a customer purchases the product from Webshop a seller gets notified to fulfill that order. Once the customer receives the product, or the estimated delivery date is due, the customer gets a satisfaction survey by email where he can give a note for the purchase experience and write down some comments.
+
+| Column Name | Description |
+| --- | ---|
+| review_id | unique review identifier |
+| order_id | unique order identifier |
+| review_score | note ranging from 1 to 5 given by the customer on a satisfaction survey |
+| review_comment_title | comment title from the review left by the customer, in Portuguese |
+| review_comment_message | comment message from the review left by the customer, in Portuguese |
+| review_creation_date | shows the date in which the satisfaction survey was sent to the customer |
+| review_answer_timestamp | shows satisfaction survey answer timestamp |
 
 ### olist_orders_dataset.csv
 
-FIXME
+This is the core dataset. From each order you might find all other information.
+
+| Column Name | Description |
+| --- | ---|
+| order_id | unique identifier of an order |
+| customer_id | key to the customer dataset. Each order has a unique customer_id |
+| order_status | reference to the order status (delivered, shipped, etc) |
+| order_purchase_timestamp | shows the purchase timestamp |
+| order_approved_at | shows the payment approval timestamp |
+| order_delivered_carrier_date | shows the order posting timestamp. When it was handled to the logistic partner |
+| order_delivered_customer_date | shows the actual order delivery date to the customer |
+| order_estimated_delivery_date | shows the estimated delivery date that was informed to customer at the purchase moment |
 
 ### olist_products_dataset.csv
 
-FIXME
+This dataset includes data about the products sold by the Webshop.
+
+| Column Name | Description |
+| --- | ---|
+| product_id | unique product identifier |
+| product_category_name | root category of product, in Portuguese |
+| product_name_lenght | number of characters extracted from the product name |
+| product_description_lenght | number of characters extracted from the product description |
+| product_photos_qty | number of product published photos |
+| product_weight_g | product weight measured in grams |
+| product_length_cm | product length measured in centimeters |
+| product_height_cm | product height measured in centimeters |
+| product_width_cm | product width measured in centimeters |
 
 ### olist_sellers_dataset.csv
 
-FIXME
+This dataset includes data about the sellers that fulfilled orders made at Olist. Use it to find the seller location and to identify which seller fulfilled each product.
+
+| Column Name | Description |
+| --- | ---|
+| seller_id | seller unique identifier |
+| seller_zip_code_prefix | first 5 digits of seller zip code |
+| seller_city | seller city name |
+| seller_state | seller state |
+
 
 ### product_category_name_translation.csv
 
-FIXME
+Translates the product_category_name to English.
+
+| Column Name | Description |
+| --- | ---|
+| product_category_name | category name in Portuguese |
+| product_category_name_english | category name in English |
+
 </details>
 
 ### Data Schema

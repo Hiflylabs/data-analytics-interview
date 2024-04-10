@@ -147,7 +147,7 @@ Translates the product_category_name to English.
 
 </details>
 
-### Data Schema
+## Data Schema
 The data is divided in multiple datasets for better understanding and organization. Please refer to the following data schema when working with it:
 <picture>
 ![Data Schema](image.png)

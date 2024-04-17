@@ -59,8 +59,10 @@ The order_id = ```00143d0f86d6fbd9f9b38ab440ac16f5``` has 3 items (same product)
 | product_id | product unique identifier |
 | seller_id | seller unique identifier |
 | shipping_limit_date | shows the seller shipping limit date for handling the order over to the logistic partner |
-| price | item price |
+| selling_price | item price |
 | freight_value | item freight value item (if an order has more than one item the freight value is splitted between items) |
+| cost_price | ... |
+| payment_value_map | ... |
 
 ### olist_order_payments_dataset.csv
 
@@ -73,9 +75,6 @@ This dataset includes data about the orders payment options.
 | payment_type | method of payment chosen by the customer |
 | payment_installments | number of installments chosen by the customer |
 | payment_value | transaction value |
-| shipping_limit_date | shows the seller shipping limit date for handling the order over to the logistic partner |
-| price | item price |
-| freight_value | item freight value item (if an order has more than one item the freight value is splitted between items) |
 
 ### olist_order_reviews_dataset.csv
 
@@ -107,6 +106,8 @@ This is the core dataset. From each order you might find all other information.
 | order_delivered_carrier_date | shows the order posting timestamp. When it was handled to the logistic partner |
 | order_delivered_customer_date | shows the actual order delivery date to the customer |
 | order_estimated_delivery_date | shows the estimated delivery date that was informed to customer at the purchase moment |
+| campaign | order was sent within a campaign period |
+| campaign_type | which campaign period the order was made |
 
 ### olist_products_dataset.csv
 
@@ -135,7 +136,6 @@ This dataset includes data about the sellers that fulfilled orders made at Olist
 | seller_city | seller city name |
 | seller_state | seller state |
 
-
 ### product_category_name_translation.csv
 
 Translates the product_category_name to English.
@@ -144,6 +144,23 @@ Translates the product_category_name to English.
 | --- | ---|
 | product_category_name | category name in Portuguese |
 | product_category_name_english | category name in English |
+
+### website_analitics_dataset.csv
+
+| Column Name | Description |
+| --- | ---|
+| customer_id | key to the customer dataset |
+| avg_time_on_website | average time spent on the website in a hh:mm:ss format |
+| exit | a flag if exited without buying |
+| order_flag | the customer ordered |
+| source | store visit source |
+| new_users | a flag for a new user |
+| platform | which device was used during the engagement |
+| clicks | number of total clicks for a customer |
+| nr_of_products_viewed | an aggregate number of products viewed during a lifetime |
+| nr_of_relatable_products_viewed | number of relatable products viewed |
+| browser | preferred browser used by the customer |
+| ad_click | the customer clicked on at least 1 ad during their lifetime |
 
 </details>
 

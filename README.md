@@ -61,8 +61,8 @@ The order_id = ```00143d0f86d6fbd9f9b38ab440ac16f5``` has 3 items (same product)
 | shipping_limit_date | shows the seller shipping limit date for handling the order over to the logistic partner |
 | selling_price | item price |
 | freight_value | item freight value item (if an order has more than one item the freight value is splitted between items) |
-| cost_price | ... |
-| payment_value_map | ... |
+| cost_price | cost of each shipment |
+| payment_value_map | - |
 
 ### olist_order_payments_dataset.csv
 
